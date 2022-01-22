@@ -1,2 +1,2 @@
 # CAISO-Scraper
-CAISO Scraper can handle downloading and parsing large price datasets from CAISO Web Interface automatically 
+CAISO Scraper is developed to automatically download and parse large price datasets from CAISO Web Interface. 
