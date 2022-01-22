@@ -1,9 +1,11 @@
 # -*- coding: utf-8 -*-
 """
-Last Updated: Jun 11, 2018
+Last Updated: Jan 22, 2022
 
 Author: Gokce Kahvecioglu
-         Northwestern University
+        Northwestern University
+        Industrial Engineering and 
+        Management Sciences
 """
 
 import requests
@@ -50,6 +52,9 @@ def request_url(start_date, end_date, market_info, node='ALL'):
 
 
 def get_year(data):
+         """
+         returns the year of the data
+         """
     return data.year
 
 
@@ -58,6 +63,9 @@ def get_posit(data, position):
 
 
 def convert_to_utc(dateobject, localtz):
+         """
+         Converts local time into UTC
+         """
     local = pytz.timezone(localtz)
     local_dt = local.localize(dateobject, is_dst=None)
     utc_dt = local_dt.astimezone(pytz.utc)
@@ -92,7 +100,7 @@ def getCAISO_lmp(start_date, end_date, node_id='ALL', market='DAM',
     node: ALL
 
     Output:
-
+         cleaned LMP dataset
     """
     # operating start/end datetime in GMT
     start_time = datetime.strptime(start_date, '%Y%m%d')
